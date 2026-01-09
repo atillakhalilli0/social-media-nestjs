@@ -18,6 +18,9 @@ export class UserEntity extends CommonEntity {
   @Column()
   password: string;
 
+  @Column({ default: false })
+  isPrivate: boolean;
+
   @Column({ type: 'enum', enum: Role, default: Role.USER, array: true })
   role: Role[];
 
