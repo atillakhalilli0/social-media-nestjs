@@ -11,8 +11,8 @@ import { ClsService } from 'nestjs-cls';
 export class UserService {
   constructor(
     @InjectRepository(UserEntity)
-    private readonly userRepo: Repository<UserEntity>,
-    private readonly cls: ClsService,
+    private userRepo: Repository<UserEntity>,
+    private cls: ClsService,
   ) {}
 
   find(params: FindParams<UserEntity>) {
